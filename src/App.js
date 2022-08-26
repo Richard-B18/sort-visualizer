@@ -1,7 +1,7 @@
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
 
-import SortingVisualizer from "./sortingVisualizer/sortingVisualizer";
+import SortingVisualizer from "./visualizer/sortingVisualizer";
 
 document.body.style.overflow = "hidden";
 
