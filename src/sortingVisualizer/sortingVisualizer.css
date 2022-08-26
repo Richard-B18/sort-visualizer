@@ -1,0 +1,22 @@
+.array {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    height: 100%;
+}
+
+.array-bar {
+    /*background-color: #61dafb;*/
+    display: inline-block;
+    align-self: flex-end;
+    color: white;
+}
+
+.settings {
+    align-items: center;
+}
+
+.main {
+    height: 100vh;
+    display: grid;
+}
