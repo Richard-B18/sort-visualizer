@@ -1,17 +1,16 @@
 import  { DEFAULT_COLOR, CHECKING_COLOR, SORTED_COLOR, DEFAULT_SPEED } from '../sortingVisualizer/sortingVisualizer';
 
-export function insertion(arr) {
-    const auxiliary_arr = arr.slice();
+export function insertion(array) {
 
-    const n = arr.length;
+    const n = array.length;
     const animations = [] // array of objects, every object has an array to show and numbers being swapped
 
     let i, key, j;
     for (i = 1; i < n; i++) {
-        key = auxiliary_arr[i];
+        key = array[i];
         j = i - 1;
 
-        while (j >= 0 && auxiliary_arr[j] > key) {
+        while (j >= 0 && array[j] > key) {
             const animation1 = {
                 'animate': [j, i],
                 'mode': 'compare',
@@ -24,10 +23,10 @@ export function insertion(arr) {
             }
             animations.push(animation2);
 
-            auxiliary_arr[j + 1] = auxiliary_arr[j];
+            array[j + 1] = array[j];
             j = j - 1;
         }
-        auxiliary_arr[j + 1] = key;
+        array[j + 1] = key;
         const animation3 = {
             'animate': [j + 1, i],
             'mode': 'insert',

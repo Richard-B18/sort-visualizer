@@ -12,9 +12,12 @@ import insertionAnimation from '../algorithms/insertionsort';
 import { selection } from '../algorithms/selectionsort'
 import selectionAnimation from '../algorithms/selectionsort';
 
+import {getMergeAnimations} from '../algorithms/mergesort'
+import mergeAnimation from '../algorithms/mergesort';
+
 export const DEFAULT_COLOR = `rgb(188, 233, 255)`
 
-export const CHECKING_COLOR = `rgb(166, 235, 153)`
+export const CHECKING_COLOR = `rgb(255, 0, 0)`
 
 export const SORTED_COLOR = `rgb(214, 171, 224)`
 
@@ -97,20 +100,23 @@ export default class SortingVisualizer extends React.Component {
 
         this.setState({sorting: true});
 
+        const aux = array.slice();
         switch (algo) {
             case 'bubble':
-                animations = bubble(array);
+                animations = bubble(aux);
                 bubbleAnimation(animations, animationSpeed);
                 break;
             case 'insertion':
-                animations = insertion(array);
+                animations = insertion(aux);
                 insertionAnimation(animations, animationSpeed);
                 break;
             case 'selection':
-                animations = selection(array);
+                animations = selection(aux);
                 selectionAnimation(animations, animationSpeed);
                 break;
             case 'merge':
+                animations = getMergeAnimations(aux);
+                mergeAnimation(animations, animationSpeed, array.length <= 20);
                 break;
             default:
                 return;

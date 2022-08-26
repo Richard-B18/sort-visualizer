@@ -1,8 +1,6 @@
 import  { DEFAULT_COLOR, CHECKING_COLOR, SORTED_COLOR, DEFAULT_SPEED } from '../sortingVisualizer/sortingVisualizer';
 
-export function bubble(toBeAnimated) {
-    const array = toBeAnimated.slice();
-
+export function bubble(array) {
     const size = array.length;
     const animations = [] // array of objects, every object has an array to show and numbers being swapped
 
