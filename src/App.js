@@ -3,7 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 
 import SortingVisualizer from "./visualizer/sortingVisualizer";
 
-document.body.style.overflow = "hidden";
+// document.body.style.overflow = "hidden";
 
 function App() {
   return (
