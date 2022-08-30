@@ -2,7 +2,7 @@ import {Flex, Slider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack, T
 import {useState} from "react";
 
 export default function SizeSelector(props) {
-    const [sliderValue, setSliderValue] = useState(50);
+    const [sliderValue, setSliderValue] = useState(200);
 
     const labelStyles = {
         mt: '5',
@@ -12,7 +12,7 @@ export default function SizeSelector(props) {
 
     return (
         <Flex>
-            <Text ml={5} mt={3}>Size</Text>
+            <Text ml={5} mt={3}>Array Size</Text>
             <Slider
                 disabled={props.disableSettings}
                 ml={5}
@@ -20,7 +20,7 @@ export default function SizeSelector(props) {
                 w={`50%`}
                 defaultValue={sliderValue}
                 min={10}
-                max={200}
+                max={500}
                 onChange={(val) => {
                     setSliderValue(val);
                     props.onSizeChange(val);

@@ -12,7 +12,7 @@ export default function SpeedSelector(props) {
 
     return (
         <Flex mt={5}>
-            <Text ml={5} mt={3}>Speed</Text>
+            <Text ml={5} mt={3}>Sorting Speed</Text>
             <Slider
                 disabled={props.disableSettings}
                 ml={5}

@@ -19,7 +19,7 @@ export const DEFAULT_COLOR = `rgb(188, 233, 255)`
 
 export const CHECKING_COLOR = `rgb(255, 0, 0)`
 
-export const SORTED_COLOR = `rgb(214, 171, 224)`
+export const SORTED_COLOR = `rgb(48, 194, 31)`
 
 export const DEFAULT_SPEED = 5;
 
@@ -33,7 +33,7 @@ export default class SortingVisualizer extends React.Component {
             sorting: false,
             sorted: false,
             width: 1000, // width of whole array display
-            size: 50,
+            size: 200,
             speed: 1,
             algo: 'bubble',
             array: [],

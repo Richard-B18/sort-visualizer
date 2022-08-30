@@ -137,4 +137,10 @@ export default function mergeAnimate(animations, speed, isSmallArray) {
             }
         }, DEFAULT_SPEED * i / speed);
     }
+
+    for (let i = 0; i < toBeAnimated.length; i++) {
+        setTimeout(() => {
+            toBeAnimated[i].style.backgroundColor = SORTED_COLOR;
+        }, DEFAULT_SPEED * animations.length / speed + 3 * i);
+    }
 }
